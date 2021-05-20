@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ChessWithPythonChess</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_0_00_00_00_1">0:00:00:00</string>
+    <string name="medium">Medium</string>
+    <string name="easy">Easy</string>
+    <string name="choose_difficulty_and_start_game">Choose Difficulty and Start Game</string>
+    <string name="connect_to_server">Connect to server</string>
+    <string name="_0_00_00_00_2">0:00:00:00</string>
+    <string name="hard">Hard</string>
+    <string name="choose_color_play">Choose color play</string>
+    <string name="start_playing">Start Playing</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+</resources>

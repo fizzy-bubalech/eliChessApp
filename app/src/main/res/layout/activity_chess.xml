@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChessActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_clk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewClockWhite"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_00_00_00_1"
+            android:gravity="center_horizontal"
+            android:textFontWeight="@android:integer/config_shortAnimTime"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewClockBlack"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_0_00_00_00_2"
+            android:gravity="center_horizontal"
+            android:textFontWeight="@android:integer/config_shortAnimTime"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <GridView
+        android:layout_below="@+id/layout_clk"
+        android:id="@+id/boardGreedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="0dp"
+        android:numColumns="8"
+        android:verticalSpacing="0dp"/>
+
+    <GridView
+        android:layout_below="@+id/layout_clk"
+        android:id="@+id/piecesGreedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="0dp"
+        android:numColumns="8"
+        android:verticalSpacing="0dp" />
+
+    <Button
+        android:id="@+id/btnConnectServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/connect_to_server"
+        android:textColor="#0080FF"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/diffChooseText"
+        android:layout_below="@+id/btnConnectServer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:text="@string/choose_difficulty_and_start_game"
+        android:textColor="#0080FF"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/group_view"
+        android:layout_below="@+id/diffChooseText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:checkedButton="@id/easy"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/easy"
+            android:textColor="#0080FF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/medium"
+            android:textColor="#0080FF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/hard"
+            android:textColor="#0080FF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/group_view"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/chooseColorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/choose_color_play"
+        android:textColor="#0080FF"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseColorTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnChoosePlayWhite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_pawn"
+            android:text=""
+            android:textSize="12sp"
+            android:contentDescription="@string/todo1" />
+
+        <ImageButton
+            android:id="@+id/btnChoosePlayBlack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/black_pawn"
+            android:elevation="1dp"
+            android:text=""
+            android:textSize="12sp"
+            android:contentDescription="@string/todo2" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnStartPlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_color"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/start_playing"
+        android:textColor="#0080FF"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>
